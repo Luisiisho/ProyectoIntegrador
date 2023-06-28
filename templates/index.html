@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos_index.css">
     <title>FCcalcinicial</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="fporcentaje.js"></script>
 </head>
 <body>
-    
+    <center>
+        <img src="UPQ.jpg" style="width: 500px;" alt="logo">
+    </center>
+    <center>
+        <h2 style="color: blue;" align="center"></h2>
+        <span style="text-decoration: wavy;">Introduce tu edad</span>
+        <b><span style="text-decoration: wavy;">Introduce tu fecha de nacimiento</span><input type="date" id="DOB"</b>
+        <span id="message" style="color: red;"></span>
+        <br>
+        <b><span style="text-decoration: wavy;">Introduce tu frecuencia cardiaca base></span><input max=220 min=60 type="number" id="FCB"></b>
+        <span id="message" style="color: red;"></span>
+        <br>
+        <br>
+        <span>Si no sabes tu frecuencia cardiaca base, favor de medirla antes de comenzar</span>
+        <button name="Fcmax" type="submit" onclick="FcmaxCalcyzn()">Calcular Fcmax</button><br>
+        <h3 style="color: rgb(13, 4, 74);" id="resultado" align="center"></h3>
+    </center>
 </body>
 </html>
