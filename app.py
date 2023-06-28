@@ -1,5 +1,5 @@
 #Importación del framework y de MySQL
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template
 from flask_mysqldb import MySQL
 
 #Inicialización del APP/servidor
@@ -21,26 +21,11 @@ def index():
 #Ruta http:localhost:5000/guardar - tipo POST para Insert
 @app.route('/guardar', methods = ['POST'])
 def guardar():
-    if request.method == 'POST':
-        #Pasamos a variables el contenido de los inputs
-        Vtitulo = request.form['txtTitulo']
-        Vartista = request.form['txtArtista']
-        Vanio = request.form['txtAnio']
-        #Conectar y ejecutar el insert
-        #El objeto tipo cursor llamado CS
-        CS = mysql.connection.cursor()   #(%s, %s, %s) --> Datos indefinidos que se pasan al siguiente parámetro de execute
-        CS.execute('insert into tbalbums(titulo, artista, anio) values(%s, %s, %s)', (Vtitulo, Vartista, Vanio))
-        mysql.connection.commit()
-        #print(titulo, artista, anio)
-    
-    flash('El album fue agregado correctamente')
-    return redirect(url_for('index'))#Redireccionamos a una url (la que llamamos index)
-
+    return 'Se guardaron los datos'    
 
 @app.route('/eliminar')
 def eliminar():
     return "Se elimino en la BD"
-
 
 #Hacer que el servidor trabaje en el puerto especifícado: 5000 para este caso
 #Ejecución del servidor en el puerto 5000
