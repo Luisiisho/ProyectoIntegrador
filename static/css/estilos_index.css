@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(6deg, red, lightblue,rgb(81,206,248));
+    display: flex;
+    font-family: 'dosis, sans-serif';
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(6, 192, 167, 0.697);
+}
+
+button{
+    background: linear-gradient(6deg,blue,pink,purple);
+}
+
+button:hover{
+    background-color: lightblue;
+}
