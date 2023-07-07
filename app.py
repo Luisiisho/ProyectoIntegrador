@@ -12,7 +12,6 @@ app.secret_key = "clave_secreta"#Token para validación por cuestiones de seguri
 mysql = MySQL(app)
 
 
-
 #Declaración de las ruta http://localhost:5000
 @app.route('/')#Ruta raíz/principal o index
 def index():

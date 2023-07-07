@@ -9,20 +9,30 @@
 </head>
 <body>
     <center>
-        <img src="{{ url_for('static', filename='img/UPQ.jpg') }}" style="width: 500px;" alt="logo">    
+        <img src="{{ url_for('static', filename='img/UPQ.jpg') }}" style="width: 400px;" alt="logo">
     <center>
         <h2 style="color: blue;" align="center"></h2>
         <span style="text-decoration: wavy;">Introduce tu edad</span>
         <b><span style="text-decoration: wavy;">Introduce tu fecha de nacimiento</span><input type="date" id="DOB"></b>
         <span id="message" style="color: red;"></span>
         <br>
-        <b><span style="text-decoration: wavy;">Introduce tu frecuencia cardiaca base</span><input max=220 min=60 type="number" id="FCB"></b>
+        <b><span style="text-decoration: wavy;">Frecuencia cardiaca en reposo</span><input max=220 min=60 type="number" id="FCB"></b>
         <span id="message" style="color: red;"></span>
         <br>
         <br>
         <span>Si no sabes tu frecuencia cardiaca base, favor de medirla antes de comenzar</span>
         <button name="Fcmax" type="submit" onclick="FcmaxCalcyzn()">Calcular Fcmax</button><br>
         <h3 style="color: rgb(13, 4, 74);" id="resultado" align="center"></h3>
+        
+        <button onclick="calcularZonas()">Calcular Zonas</button>
+        <h2>Zonas de Esfuerzo:</h2>
+        <ul style="list-style: none;">
+            <li>Zona 60%: <span id="zona60"></span></li>
+            <li>Zona 70%: <span id="zona70"></span></li>
+            <li>Zona 80%: <span id="zona80"></span></li>
+            <li>Zona 90%: <span id="zona90"></span></li>
+            <li>Zona 100%: <span id="zona100"></span></li>
+        </ul>
     </center>
 </body>
 </html>
